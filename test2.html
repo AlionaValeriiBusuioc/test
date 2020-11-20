@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const studentStr = '{"name": "Alex", "age":20, "email":"alex@email.com"}';
+        const studentObject = JSON.parse(studentStr, function(key, value){
+            if(typeof value == "string"){
+                return value.toUpperCase();
+            }else{
+                return value;
+            }
+        });
+        console.log(studentObject);
+    </script>
+</body>
+</html>

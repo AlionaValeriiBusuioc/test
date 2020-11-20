@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        *{
+         font-family: 'Montserrat', sans-serif;
+        }
+        .nav-link{
+            color: lightgray;
+            padding: 10px;
+            margin-top: 26px;
+        }
+        .active{
+         color: orange;
+        }
+        a{
+            text-decoration: none;
+        }
+       .arrange{
+        text-align: center;  
+        display: flex;
+        justify-content: center;
+       }
+      .main{
+          margin-right: 150px;
+      }
+      .green{
+          width: 120px;
+          height: 120px;
+          background-color: green;
+          border: 1px solid black;
+          border-radius: 10px;
+      }
+      .m{ 
+          color:  #33cc33;
+          margin-top: 70px;
+          margin-right: 50px;
+      }
+      .pink{
+          width: 90px;
+          height: 90px;
+          border-radius: 10px;
+          background-color: #ff80bf;
+          border: 1px solid black; 
+      }
+      .r{
+          color:  #ffcce6;
+          margin-top: 45px;
+          margin-right: 45px;
+      }
+      .blue{
+          width: 90px;
+          height: 90px;
+          border-radius: 10px;
+          background-color: #1a75ff;
+          border: 1px solid black;  
+      }
+      .ns{
+          color: #4d94ff;
+          margin-top: 45px;
+          margin-right: 20px;
+      }
+      .justify{
+          flex-direction: column;
+      }
+      .move{
+          width: 620px;
+          height: 250px;
+          border: 3px solid lightgray;
+          border-radius: 10px;
+          padding: 60px;
+          margin-left: 300px;
+      }
+      .design{
+          display: flex;
+      }
+      .space{
+          padding: 20px;
+      }
+      .green-item{
+          padding-top: 25px;
+          width: 140px;
+          text-align: left;
+      }
+      .to-right{
+          padding-right: 150px;
+      }
+      .item{
+          margin-top: 10px;
+          padding-left: 25px;
+          width: 180px;
+          text-align: left;
+      }
+      .faded{
+            opacity: 0.5;
+        }
+        @media only screen and (max-width:700px){
+          .main{
+              margin-right: 15px;
+              text-align: justify;
+          }  
+         .move{
+             margin-left: 0;
+             width: 70%;
+         }
+         .to-right{
+            padding-right: 5px;
+         }
+         .item{
+            padding-left: 5px;
+            width: 100px;
+         }
+        }
+    </style>
+</head>
+<body>
+    <div class="arrange">
+    <h1 class="main">Please select one font</h1>
+    <div class="arrange">
+        <div class="arrange">
+            <a class="nav-link" href="#">MY FONTS</a>
+        </div>
+        <div class="arrange">
+          <a class="nav-link active" href="#">BUY FONTS</a>
+        </div>
+    </div> 
+</div>
+<div>
+    <div class="arrange move">
+        <div class="justify">
+        <div class="green">
+         <h1 class="m">M</h1>
+        </div>
+        <div>
+        <li class="green-item">Merriweather project is led by Sorkin Type</li>
+        </div> 
+        </div>
+        <div class="to-right"></div>
+          <div class="justify">
+          <div class="design">
+            <div class="pink" onclick="toggleFunction()">
+              <h1 class="r">R</h1>
+            </div>
+            <li id="text" class="item" onclick="toggleFunction()">Roboto doesn't compromise, allow-ing letters</li>
+          </div>
+          <div class="space"></div>
+          <div class="design">
+            <div class="blue">
+              <h1 class="ns">NS</h1>
+            </div> 
+            <li class="item">Noto Sans covers over 30 scripts</li>
+          </div>
+        </div>
+</div>
+</div>
+<script>
+         var text = document.getElementById('text');
+        function toggleFunction(){
+            if(text.classList=='faded'){
+                text.classList.remove('faded')
+            }
+            else{
+                text.classList.add('faded');
+            }
+        }
+</script>
+</body>
+</html>
